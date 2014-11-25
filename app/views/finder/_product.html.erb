@@ -1,0 +1,33 @@
+<nav>
+    <li><%= link_to 'Products - New', new_path %></li>
+    <li><%= link_to 'Products - On Sale', onsale_path %></li>
+    <li><%= link_to 'Products - Recently Updated', updated_path %></li>
+</nav>
+
+<% @products.each do |product| %>
+  <div class="product">
+    <p><strong>Product ID: <%= link_to product.name, product %></strong></p>
+    
+    <p><strong>Category: </strong>
+       <%= product.category.name %></p>
+    
+    <p><strong>Price: $</strong>
+       <%= product.price %></p>
+    
+    <p><strong>Stock_quantity: </strong>
+       <%= product.stock_quantity %></p>
+    
+    <p><strong>Status: </strong>
+       <%= product.status %></p>
+    
+    <p><strong>Description: </strong>
+       <%= product.description %></p>
+           
+    <p><strong>Image: </strong>
+    <% if product.image.present? %>     
+        <%= image_tag product.image %></p>
+    <% end %>
+    <br>
+  
+  </div>
+<% end %>
