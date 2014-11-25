@@ -1,11 +1,9 @@
-<h2>All Products</h2>
-
-
-
 <nav>
-    <li><%= link_to 'Products - New', new_path %></li>
-    <li><%= link_to 'Products - On Sale', onsale_path %></li>
-    <li><%= link_to 'Products - Recently Updated', updated_path %></li>
+    <li><%= link_to 'Products - Wall Lamps', wall_lamp_path %></li>
+    <li><%= link_to 'Products - Celling Lamps', celling_lamp_path %></li>
+    <li><%= link_to 'Products - Floor Lamps', floor_lamp_path %></li>
+    <li><%= link_to 'Products - Table Lamps', table_lamp_path %></li>
+    <li><%= link_to 'Products - Flower Lamps', flower_lamp_path %></li>
 </nav>
 
 <% @products.each do |product| %>

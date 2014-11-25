@@ -1,37 +1,3 @@
 <h2>Products - Wall Lamps</h2>
 
-<nav>
-    <li><%= link_to 'Products - Wall Lamps', wall_lamp_path %></li>
-    <li><%= link_to 'Products - Celling Lamps', celling_lamp_path %></li>
-    <li><%= link_to 'Products - Floor Lamps', floor_lamp_path %></li>
-    <li><%= link_to 'Products - Table Lamps', table_lamp_path %></li>
-    <li><%= link_to 'Products - Flower Lamps', flower_lamp_path %></li>
-</nav>
-
-<% @products.each do |product| %>
-  <div class="product">
-    <p><strong>Product ID: <%= link_to product.name, product %></strong></p>
-    
-    <p><strong>Category: </strong>
-       <%= product.category.name %></p>
-    
-    <p><strong>Price: $</strong>
-       <%= product.price %></p>
-    
-    <p><strong>Stock_quantity: </strong>
-       <%= product.stock_quantity %></p>
-    
-    <p><strong>Status: </strong>
-       <%= product.status %></p>
-    
-    <p><strong>Description: </strong>
-       <%= product.description %></p>
-           
-    <p><strong>Image: </strong>
-    <% if product.image.present? %>     
-        <%= image_tag product.image %></p>
-    <% end %>
-    <br>
-  
-  </div>
-<% end %>
+<%= render 'category' %>
