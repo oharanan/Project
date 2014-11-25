@@ -1,5 +1,7 @@
 <h2>About Us</h2>
 
-<p>ART DE LIGHT is a lighting showroom and store owned and operated by TH International Trading LTD. </p>
-
-<p>In additional to lighting sales and wholesale through the showroom and store. We also offer customized lighting design service and solutions, online sales and sales by phone. Our services include design consulation, delivery and installation as maybe required by clients.</p>
+<% @abouts.each do |about| %>
+  <div>
+    <p><%= about.content %></p>
+  </div>
+<% end %>

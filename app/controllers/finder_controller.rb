@@ -1,12 +1,13 @@
 class FinderController < ApplicationController
   def index
-    @products = Product.all
-    
+    @products = Product.all    
   end
   
-  def contact    
+  def contact
+    @contacts = ContactUs.all
   end
   
-  def about    
+  def about
+    @abouts = About.all
   end
 end

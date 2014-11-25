@@ -1,22 +1,26 @@
 <h2>All Products</h2>
-<div class="product">
-  <% @products.each do |product| %>
-    <p><strong>Name:<%= product.name %></strong></p>
+
+<% @products.each do |product| %>
+  <div class="product">
+    <p><strong>Name: <%= product.name %></strong></p>
     
-    <p><strong>Category:</strong>
+    <p><strong>Category: </strong>
        <%= product.category.name %></p>
     
-    <p><strong>Price:</strong>
+    <p><strong>Price: $</strong>
        <%= product.price %></p>
     
-    <p><strong>Stock_quantity:</strong>
+    <p><strong>Stock_quantity: </strong>
        <%= product.stock_quantity %></p>
     
-    <p><strong>Description:</strong>
-       <%= product.description %></p>   
-        
-    <p><strong>Image:</strong>
-       <%= product.image %></p>  
+    <p><strong>Description: </strong>
+       <%= product.description %></p>
+           
+    <p><strong>Image: </strong>
+    <% if product.image.present? %>     
+        <%= image_tag product.image %></p>
+    <% end %>
     <br>
-  <% end %>
-</div> 
+  
+  </div>
+<% end %>
