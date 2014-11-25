@@ -1,7 +1,9 @@
 <h2>All Categories</h2>
+  <li><%= link_to 'Wall Lamps', wall_lamp_path %></li>
+  <li><%= link_to 'Celling Lamps', celling_lamp_path %></li>
+  <li><%= link_to 'Floor Lamps', floor_lamp_path %></li>
+  <li><%= link_to 'Table Lamps', table_lamp_path %></li>
+  <li><%= link_to 'Flower LED', flower_lamp_path %></li>
+  
 
-<% @categories.each do |category| %>
 
-  <p><strong>Category Name: </strong><%= category.name %></p>
-
-<% end %>

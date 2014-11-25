@@ -7,7 +7,7 @@ class CreateProducts < ActiveRecord::Migration
       t.string :size
       t.string :description
       t.string :image
-      t.string :status
+      
       t.timestamps
     end
   end
