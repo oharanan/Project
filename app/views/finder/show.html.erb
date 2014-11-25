@@ -2,23 +2,23 @@
 
 
 <div class="product">
-  <p><strong>Product ID: <%= product.name %></strong></p>
+  <p><strong>Product ID: <%= @product.name %></strong></p>
   
   <p><strong>Category: </strong>
-     <%= product.category.name %></p>
+     <%= @product.category.name %></p>
   
   <p><strong>Price: $</strong>
-     <%= product.price %></p>
+     <%= @product.price %></p>
   
   <p><strong>Stock_quantity: </strong>
-     <%= product.stock_quantity %></p>
+     <%= @product.stock_quantity %></p>
   
   <p><strong>Description: </strong>
-     <%= product.description %></p>
+     <%= @product.description %></p>
          
   <p><strong>Image: </strong>
-  <% if product.image.present? %>     
-      <%= image_tag product.image %></p>
+  <% if @product.image.present? %>     
+      <%= image_tag @product.image %></p>
   <% end %>
   <br>
 

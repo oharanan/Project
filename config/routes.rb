@@ -10,8 +10,8 @@ Rails.application.routes.draw do
   
   get 'categories' => 'finder#category', as: 'category'
   
-  get 'products' => 'finder#product', as: 'product'
+  get 'products' => 'finder#product', as: 'products'
   
-  get 'product/:id' => 'finder#show', as: 'show'
+  get 'product/:id' => 'finder#show', as: 'product'
   
 end
