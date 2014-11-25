@@ -1,0 +1,25 @@
+<h2>Product Infomation</h2>
+
+
+<div class="product">
+  <p><strong>Product ID: <%= product.name %></strong></p>
+  
+  <p><strong>Category: </strong>
+     <%= product.category.name %></p>
+  
+  <p><strong>Price: $</strong>
+     <%= product.price %></p>
+  
+  <p><strong>Stock_quantity: </strong>
+     <%= product.stock_quantity %></p>
+  
+  <p><strong>Description: </strong>
+     <%= product.description %></p>
+         
+  <p><strong>Image: </strong>
+  <% if product.image.present? %>     
+      <%= image_tag product.image %></p>
+  <% end %>
+  <br>
+
+</div>

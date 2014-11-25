@@ -8,4 +8,10 @@ Rails.application.routes.draw do
   
   get 'about' => 'finder#about', as: 'about'
   
+  get 'categories' => 'finder#category', as: 'category'
+  
+  get 'products' => 'finder#product', as: 'product'
+  
+  get 'product/:id' => 'finder#show', as: 'show'
+  
 end
