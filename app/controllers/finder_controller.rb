@@ -55,4 +55,22 @@ class FinderController < ApplicationController
     @products = Product.where(category_id: '3')
   end
   
+  def search_products
+    wildcard_keywords = '%' + params[:search_keywords] + '%'
+    @products = Product.where("name LIKE ?", wildcard_keywords)    
+    render 'product'
+  end
+  
+  def search_categories
+    wildcard_keywords = '%' + params[:search_keywords] + '%'
+    @categories = Category.where("name LIKE ?", wildcard_keywords)    
+    render 'category'
+  end
+  
+  def show_categories
+    @categories = Category.all
+    @category = Category.find(params[:id])
+    @products = @category.products
+  end
+  
 end

@@ -1,7 +1,11 @@
 <h2>All Products</h2>
 
 
-
+<%= form_tag search_products_path, method: :get do %>
+  <%= text_field_tag :search_keywords %>
+  <%= submit_tag 'Search' %>  
+<% end %>
+  
 <nav>
     <li><%= link_to 'Products - New', new_path %></li>
     <li><%= link_to 'Products - On Sale', onsale_path %></li>

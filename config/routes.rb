@@ -30,4 +30,9 @@ Rails.application.routes.draw do
   
   get 'products/flower_lamps' => 'finder#flower_lamp', as: 'flower_lamp'
   
+  get 'search_products' => 'finder#search_products', as: 'search_products'
+  
+  get 'search_categories' => 'finder#search_categories', as: 'search_categories'
+  
+  get 'categories/:id' => 'finder#show_categories', as: 'show_categories' 
 end
